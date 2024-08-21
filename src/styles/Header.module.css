@@ -1,0 +1,67 @@
+.header {
+    background-color: #025048;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 6rem;
+}
+
+.header h2 {
+    font-weight: 500;
+    font-family: 'Vollkorn', serif;
+}
+
+.header nav ul {
+    display: flex;
+    gap: 2rem;
+}
+
+.header nav ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    color: #ffffff;
+    letter-spacing: 1px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    position: relative;
+    padding-block-end: 0.5rem;
+}
+
+.header nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    border-radius: 5px;
+    height: 0.12em;
+    bottom: 0;
+    left: 0;
+    background: #bbf8dc;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.header nav ul li a:hover {
+    color: #bbf8dc;
+}
+
+.header nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.header nav ul li a.active {
+    color: #bbf8dc;
+}
+
+.header nav ul li a.active::after {
+    transform: scaleX(1);
+}
+
+.header button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+}

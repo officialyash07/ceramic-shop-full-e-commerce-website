@@ -1,0 +1,49 @@
+.qna {
+    background-color: #ffffff;
+}
+
+.question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 0.8rem 1.5rem;
+    border: 1px solid #d8d8d8;
+    border-bottom: none;
+    color: #025048;
+    font-family: 'Vollkorn', serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.qna:last-child {
+    border-bottom: 1px solid #d8d8d8;
+}
+
+.question svg {
+    width: 14px;
+    fill: #025048;
+}
+
+.answer {
+    padding-inline: 1.5rem;
+    border: 1px solid #d8d8d8;
+    border-bottom: none;
+    color: #4b4b4b;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1.5;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.9s ease;
+}
+
+.answer p {
+    padding-block: 0.9rem;
+}
+
+.answer.show {
+    height: auto;
+    max-height: 100px;
+}

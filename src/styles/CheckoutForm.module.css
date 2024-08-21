@@ -1,0 +1,106 @@
+.checkoutForm h3 {
+    color: #025048;
+    font-family: 'Vollkorn', serif;
+    font-weight: 600;
+    padding-block: 0.3rem;
+    margin-block-end: 1.5rem;
+    border-bottom: 1px solid #c4c4c4;
+    width: fit-content;
+}
+
+.checkoutForm input,
+.checkoutForm textarea,
+.checkoutForm select,
+.checkoutForm option {
+    outline: none;
+    border: 1px solid #c4c4c4;
+    background-color: transparent;
+    color: #4b4b4b;
+    margin-block-end: 1.5rem;
+    width: 100%;
+    padding-block: 0.7rem;
+    padding-inline: 1rem;
+}
+
+.flex {
+    display: flex;
+    gap: 1rem;
+}
+
+.checkoutForm textarea {
+    height: 100px;
+}
+
+.orderBtn {
+    color: #025048;
+    border-color: #025048;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    font-weight: 600;
+    transition: 0.3s ease;
+    width: 100%;
+}
+
+.orderBtn:hover {
+    color: #f0f0f0;
+    background-color: #025048;
+}
+
+.orderBtn:hover svg {
+    fill: #ffffff;
+    transition: 0.3s ease;
+}
+
+.orderBtn svg {
+    width: 14px;
+    fill: #025048;
+}
+
+.submitted {
+    padding: 3rem 0;
+    text-align: center;
+}
+.submitted svg {
+    width: 100px;
+    fill: #025048;
+    margin-block-end: 0.5rem;
+}
+
+.submitted h1 {
+    color: #025048;
+    margin-block-end: 0.5rem;
+}
+
+.submitted h3 {
+    color: #4b4b4b;
+}
+
+.submitted button {
+    color: #025048;
+    border-color: #025048;
+    transition: 0.3s ease;
+    margin-block-start: 1rem;
+}
+
+.submitted button:hover {
+    color: #ffffff;
+    background-color: #025048;
+}
+
+.submitted button a {
+    text-decoration: none;
+    color: #025048;
+}
+
+.submitted button:hover a {
+    color: #ffffff;
+    transition: 0.3s ease;
+}
+
+.placedActions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

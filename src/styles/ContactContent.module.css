@@ -1,0 +1,64 @@
+.content {
+    background-color: #ffffff;
+    padding-inline: 6rem;
+    padding-block-start: 10rem;
+    padding-block-end: 6rem;
+    display: grid;
+    grid-template-columns: 0.8fr 1fr;
+    gap: 3rem;
+}
+
+.touchContainer h2 {
+    font-family: 'Vollkorn', serif;
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: #025048;
+    margin-block-end: 1rem;
+}
+.touchContainer p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9rem;
+    color: #4b4b4b;
+    padding-block-start: 0.5rem;
+    margin-block-end: 1.5rem;
+}
+
+.touchContainer hr {
+    margin-block-end: 1.5rem;
+}
+
+.touchContainer svg {
+    fill: #025048;
+}
+
+.touchContainer h3 {
+    font-weight: 500;
+    font-family: 'Work Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    color: #025048;
+    display: flex;
+    align-items: center;
+}
+
+.touchContainer strong {
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+    color: #4b4b4b;
+}
+
+.touchContainer span {
+    margin-inline-end: 1rem;
+}
+
+.address p,
+.phone p,
+.email p {
+    padding-inline-start: 2.6rem;
+}
+
+.links {
+    margin-block-start: 1rem;
+    display: flex;
+    gap: 1rem;
+}

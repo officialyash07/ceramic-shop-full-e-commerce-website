@@ -1,0 +1,32 @@
+.story {
+    background-color: #ffffff;
+    padding-inline: 6rem;
+    padding-block-start: 10rem;
+    padding-block-end: 16rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+
+.story h5 {
+    color: #025048;
+    text-transform: uppercase;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-block-end: 1.5rem;
+}
+
+.heading {
+    color: #025048;
+    font-family: 'Vollkorn', serif;
+    font-size: 2.5rem;
+    margin-block-end: 2rem;
+}
+
+.content {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5;
+    font-size: 0.9rem;
+    color: #4b4b4b;
+}

@@ -1,0 +1,27 @@
+.testimonial {
+    background-color: #e2ffe2;
+    padding: 3rem 6rem;
+}
+
+.testimonial h5 {
+    color: #025048;
+    text-transform: uppercase;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-block-end: 1.5rem;
+}
+
+.heading {
+    color: #025048;
+    font-family: 'Vollkorn', serif;
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    margin-block-end: 2rem;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}

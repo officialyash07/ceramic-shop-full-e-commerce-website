@@ -1,0 +1,28 @@
+.popular {
+    padding-inline: 6rem;
+    padding-block-start: 6rem;
+    padding-block-end: 4rem;
+    background-color: #ffffff;
+}
+
+.popular h5 {
+    color: #025048;
+    text-transform: uppercase;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-block-end: 1.5rem;
+}
+
+.heading {
+    color: #025048;
+    font-family: 'Vollkorn', serif;
+    font-size: 2.5rem;
+    margin-block-end: 2rem;
+}
+
+.popularProducts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}

@@ -1,0 +1,39 @@
+.hero {
+    padding: 2rem 6rem;
+    color: #ffffff;
+    background-color: #025048;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 2rem;
+}
+
+.content {
+    padding-block-start: 9rem;
+}
+
+.content h2 {
+    font-family: 'Vollkorn', serif;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 4rem;
+}
+
+.content p {
+    font-family: 'Open Sans', sans-serif;
+    padding-block-start: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    width: 80%;
+    letter-spacing: 0.4px;
+}
+
+.image {
+    position: relative;
+    bottom: -80px;
+    z-index: 99;
+}
+
+.image img {
+    min-width: 380px;
+    max-height: 415px;
+}

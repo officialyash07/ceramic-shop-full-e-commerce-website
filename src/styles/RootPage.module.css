@@ -1,0 +1,19 @@
+#rootPage .scrollButton {
+    display: block;
+    border: none;
+    outline: none;
+    background-color: #025048;
+    width: 26px;
+    height: 26px;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 99999999;
+    border-radius: 4px;
+    padding-block-start: 1px;
+}
+
+#rootPage .scrollButton svg {
+    width: 15px;
+    fill: #ffffff;
+}

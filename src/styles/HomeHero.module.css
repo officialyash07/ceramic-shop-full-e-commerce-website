@@ -1,0 +1,67 @@
+.hero {
+    background-color: #025048;
+    color: #ffffff;
+    padding: 0 6rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.intro {
+    z-index: 9;
+    position: relative;
+}
+
+.intro h5 {
+    text-transform: uppercase;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-block-start: 12rem;
+    margin-block-end: 1.5rem;
+}
+
+.intro h2 {
+    font-family: 'Vollkorn', serif;
+    font-size: clamp(2rem, 6vw, 4rem);
+    line-height: 4rem;
+    font-weight: 500;
+    margin-block-end: 1.5rem;
+}
+
+.intro p {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    font-family: 'Vollkorn', serif;
+    margin-block-end: 2rem;
+}
+
+.intro .button {
+    color: #ffffff;
+    border-color: #ffffff;
+    transition: all 0.4s ease;
+}
+
+.intro .button:hover {
+    color: #025048;
+    background-color: #ffffff;
+}
+
+.imgContainer {
+    position: relative;
+}
+
+.hero1_img {
+    width: 450px;
+    min-height: 650px;
+    position: relative;
+    top: 3rem;
+}
+
+.hero2_img {
+    position: absolute;
+    top: 12rem;
+    left: -8.5rem;
+    width: 270px;
+    min-height: 320px;
+}

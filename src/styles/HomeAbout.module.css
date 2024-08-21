@@ -1,0 +1,57 @@
+.about {
+    padding: 6rem;
+    color: #025048;
+    background-color: #ffffff;
+}
+
+.about h5 {
+    text-transform: uppercase;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-block-end: 1.5rem;
+}
+
+.about p {
+    font-size: 2.5rem;
+    font-weight: 500;
+    font-family: 'Vollkorn', serif;
+    margin-block-end: 2rem;
+}
+
+.images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.image_2 img {
+    margin-block-start: 4rem;
+}
+
+.image_2 h3 {
+    margin-block-start: 1.5rem;
+    font-weight: 500;
+    font-size: 1.7rem;
+    font-family: 'Vollkorn', serif;
+}
+
+.image_2 p {
+    margin-block-start: 1.5rem;
+    font-weight: 400;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    color: #474b50;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.image_2 .button {
+    color: #025048;
+    border-color: #025048;
+    transition: 0.4s ease;
+}
+
+.image_2 .button:hover {
+    color: #ffffff;
+    background-color: #025048;
+}

@@ -1,0 +1,49 @@
+.footer {
+    background-color: #ffffff;
+    padding: 6rem;
+    padding-block-end: 2rem;
+    position: relative;
+}
+
+hr {
+    border: none;
+    border-bottom: 1px solid #b4bbb4;
+}
+
+.social {
+    display: flex;
+    gap: 2rem;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    width: fit-content;
+    background-color: #ffffff;
+    position: relative;
+    bottom: 4.8rem;
+}
+
+.social svg {
+    cursor: pointer;
+    fill: #4d4d4d;
+    transition: all 0.4s ease;
+}
+
+.social svg:hover {
+    fill: #025048;
+}
+
+.logo {
+    color: #025048;
+    font-family: 'Vollkorn', serif;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-block-start: -50px;
+}
+
+.cite {
+    text-align: center;
+    padding-block-start: 8px;
+    color: #4d4d4d;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8rem;
+}

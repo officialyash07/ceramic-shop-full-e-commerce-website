@@ -1,0 +1,36 @@
+.uncover {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.uncover h2 {
+    color: #ffffff;
+    font-family: 'Vollkorn', serif;
+    font-size: clamp(2rem, 6vw, 3rem);
+    line-height: 4rem;
+    font-weight: 500;
+    margin-block-end: 1.5rem;
+}
+
+.image {
+    background-image: url('../assets/footer-img.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.content {
+    background-color: #025048;
+    padding-inline: 3rem;
+    padding-block: 3rem;
+}
+
+.uncover .button {
+    color: #ffffff;
+    border-color: #ffffff;
+    transition: 0.4s ease;
+}
+
+.uncover .button:hover {
+    color: #025048;
+    background-color: #ffffff;
+}

@@ -1,0 +1,101 @@
+/* #025048  */
+/* #f1f4f1 */
+/* #487eb9  */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Vollkorn:ital,wght@0,400..900;1,400..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Reset default Margin and Padding */
+
+*,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set default body styles */
+
+body {
+    line-height: 1.2;
+    background-size: cover;
+    background-position: bottom;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    background-image: url('./assets/bg-image.jpg');
+    background-position: bottom;
+    background-repeat: repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    /* font-family: 'Work Sans', sans-serif; */
+    /* font-family: 'Open Sans', sans-serif; */
+    /* font-family: 'Vollkorn', serif; */
+}
+
+/* Images Setup */
+
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Form Element Setup */
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Reset list style to none */
+
+menu:not(article menu),
+ol:not(article ol),
+ul:not(article ul) {
+    list-style: none;
+}
+
+/* Reset lists padding */
+
+menu,
+ol,
+ul {
+    padding-left: 0;
+}
+
+/* Reset list markers */
+
+article ol,
+article ul {
+    list-style-position: inside;
+}
+
+/* Reset Cursor for Elements */
+
+label,
+button,
+select,
+summary,
+[type='radio'],
+[type='submit'],
+[type='checkbox'] {
+    cursor: pointer;
+}
+
+#root {
+    width: 100vw;
+    min-height: 100vh;
+}
+
+#modal {
+    width: 100vw;
+}

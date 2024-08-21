@@ -1,0 +1,90 @@
+.best {
+    padding-inline: 6rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    background-color: #e2ffe2;
+}
+
+.first h5 {
+    color: #025048;
+    text-transform: uppercase;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-block-start: 10rem;
+    margin-block-end: 1.5rem;
+}
+
+.first h2 {
+    text-transform: capitalize;
+    color: #474b50;
+    font-family: 'Vollkorn', serif;
+    font-size: 2.2rem;
+    font-weight: 500;
+    margin-block-end: 1rem;
+}
+
+.first p {
+    color: #474b50;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    margin-block-end: 1.5rem;
+    line-height: 1.5;
+}
+
+.image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.image img {
+    width: 100%;
+    aspect-ratio: 1;
+}
+
+.image_2 {
+    position: relative;
+    bottom: 2rem;
+}
+
+.image_3 {
+    position: relative;
+    top: 2rem;
+}
+
+.best figcaption {
+    position: absolute;
+    width: 90%;
+    padding: 1rem;
+    color: #474b50;
+    background-color: #ffffff;
+}
+
+.firstCap {
+    bottom: 1.5rem;
+}
+
+.secondCap {
+    bottom: 3.5rem;
+}
+
+.thirdCap {
+    bottom: -15px;
+}
+
+.best figcaption h3 {
+    text-transform: capitalize;
+    font-weight: 500;
+    font-family: 'Vollkorn', serif;
+    margin-block-end: 8px;
+}
+
+.best figcaption p {
+    margin: 0;
+    font-size: 0.9rem;
+    font-family: 'Open Sans', sans-serif;
+}

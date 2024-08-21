@@ -1,0 +1,41 @@
+.homeShop {
+    padding: 5rem 0;
+
+    display: flex;
+    justify-content: center;
+}
+
+.homeShop div {
+    max-width: 90rem;
+    text-align: center;
+    padding: 3rem;
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.homeShop div h2 {
+    text-transform: capitalize;
+    font-family: 'Vollkorn', serif;
+    font-weight: 500;
+    font-size: 2.3rem;
+    color: #025048;
+    margin-block-end: 1rem;
+}
+
+.homeShop div p {
+    font-family: 'Vollkorn', serif;
+    color: #025048;
+    font-size: 1.3rem;
+    margin-block-end: 1rem;
+}
+
+.homeShop .button {
+    color: #025048;
+    border-color: #025048;
+    transition: 0.4s ease;
+}
+
+.homeShop .button:hover {
+    color: #ffffff;
+    background-color: #025048;
+}

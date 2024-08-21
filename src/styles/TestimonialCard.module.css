@@ -1,0 +1,49 @@
+.testimonialCard {
+    background-color: #ffffff;
+    padding: 3rem;
+    box-shadow: rgba(63, 63, 63, 0.205) 0px 3px 8px;
+}
+
+.ratings {
+    display: flex;
+    margin-block-end: 1rem;
+}
+
+.ratings img {
+    width: 15px;
+}
+
+.feedback {
+    font-family: 'Open Sans', sans-serif;
+    color: #333333;
+    font-size: 0.9rem;
+    letter-spacing: 0.4px;
+    margin-block-end: 1rem;
+    line-height: 1.5;
+}
+
+.profile {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.profile img {
+    border-radius: 100%;
+}
+
+.name {
+    text-transform: capitalize;
+    color: #025048;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding-block-end: 4px;
+}
+
+.designation {
+    color: #333333;
+    font-size: 0.8rem;
+    letter-spacing: 0.4px;
+    text-transform: capitalize;
+}

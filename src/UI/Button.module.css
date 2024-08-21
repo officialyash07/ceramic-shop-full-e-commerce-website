@@ -1,0 +1,11 @@
+.button {
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    padding: 0.5rem 1.5rem;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid transparent;
+}

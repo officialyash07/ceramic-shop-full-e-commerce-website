@@ -1,0 +1,25 @@
+.vision {
+    background-color: #ffffff;
+    padding-inline: 6rem;
+    padding-block-start: 8rem;
+    padding-block-end: 6rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+
+.vision h2 {
+    font-family: 'vollkorn', serif;
+    font-weight: 500;
+    font-size: 2rem;
+    text-transform: capitalize;
+    color: #025048;
+    margin-block-end: 1rem;
+}
+
+.vision p {
+    color: #4b4b4b;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}

@@ -1,0 +1,101 @@
+[
+    {
+        "id": "p1",
+        "name": "Ceramic Bottles",
+        "subName": "Ceramic",
+        "price": "249",
+        "prevPrice": "",
+        "image": "images/ceramic-bottle.jpg",
+        "categories": ["Ceramic,", " Ceramic Coatings,", " Pottery"]
+    },
+    {
+        "id": "p2",
+        "name": "Ceramic Cup",
+        "subName": "Ceramic",
+        "price": "189",
+        "prevPrice": "237",
+        "image": "images/ceramic-cup.jpg",
+        "categories": ["Ceramic,", " Ceramic Coatings,", " Ceramic Kitchenware"]
+    },
+    {
+        "id": "p3",
+        "name": "Ceramic Drink Coasters",
+        "subName": "Ceramic",
+        "price": "99",
+        "prevPrice": "157",
+        "image": "images/ceramic-drink-coaster.jpg",
+        "categories": ["Ceramic,", " Ceramic Kitchenware"]
+    },
+    {
+        "id": "p4",
+        "name": "Ceramic Garden Pots",
+        "subName": "Ceramic",
+        "price": "159",
+        "prevPrice": "179",
+        "image": "images/ceramic-pot.jpg",
+        "categories": ["Ceramic"]
+    },
+    {
+        "id": "p5",
+        "name": "Ceramic Pastel Plates",
+        "subName": "Ceramic",
+        "price": "209",
+        "prevPrice": "239",
+        "image": "images/ceramic-pastel-plate.jpg",
+        "categories": ["Ceramic,", " Ceramic Coatings"]
+    },
+    {
+        "id": "p6",
+        "name": "Ceramic Plant Pots",
+        "subName": "Pottery",
+        "price": "139",
+        "prevPrice": "",
+        "image": "images/ceramic-plant-pot.jpg",
+        "categories": ["Pottery"]
+    },
+    {
+        "id": "p7",
+        "name": "Ceramic Planter",
+        "subName": "Ceramic",
+        "price": "299",
+        "prevPrice": "349",
+        "image": "images/ceramic-planter.jpg",
+        "categories": ["Ceramic,", " Pottery"]
+    },
+    {
+        "id": "p8",
+        "name": "Ceramic Plates",
+        "subName": "Ceramic",
+        "price": "119",
+        "prevPrice": "179",
+        "image": "images/ceramic-plate.jpg",
+        "categories": ["Ceramic"]
+    },
+    {
+        "id": "p9",
+        "name": "Ceramic Plates and Bowls",
+        "subName": "Ceramic",
+        "price": "209",
+        "prevPrice": "249",
+        "image": "images/ceramic-bowl.jpg",
+        "categories": ["Ceramic"]
+    },
+    {
+        "id": "p10",
+        "name": "Ceramic Plates and Spoons",
+        "subName": "Ceramic",
+        "price": "299",
+        "prevPrice": "349",
+        "image": "images/ceramic-spoon.jpg",
+        "categories": ["Ceramic,", " Ceramic Kitchenware"]
+    },
+    {
+        "id": "p11",
+        "name": "Ceramic Vases and Planters",
+        "subName": "Pottery",
+        "price": "217",
+        "prevPrice": "247",
+        "image": "images/ceramic-vase.jpg",
+        "categories": ["Pottery"]
+    }
+]

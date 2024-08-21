@@ -1,0 +1,77 @@
+.cartItem {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    font-family: 'Open sans', sans-serif;
+}
+
+.images {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.images img {
+    width: 65px;
+}
+
+.title {
+    flex: 1;
+}
+
+.title h2 {
+    padding-block-start: 10px;
+    padding-block-end: 5px;
+    color: #025048;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.actions {
+    display: flex;
+    margin-block-end: 1rem;
+}
+
+.actions button,
+.actions p {
+    border: 1px solid #a1a1a1;
+    padding: 0.3rem;
+    width: 40px;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #4b4b4b;
+}
+
+.actions button {
+    font-weight: 600;
+    background-color: transparent;
+}
+
+.actions p {
+    border-left: none;
+    border-right: none;
+}
+
+.delete {
+    text-align: right;
+}
+
+.delete p {
+    font-size: 0.9rem;
+    color: #4b4b4b;
+}
+
+.delete button {
+    width: 20px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.delete button:hover svg {
+    fill: red;
+    transition: 0.3s ease;
+}
+
+.delete button svg {
+    fill: #4b4b4b;
+    margin-block-end: 8px;
+}

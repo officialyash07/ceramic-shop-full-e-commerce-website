@@ -1,0 +1,51 @@
+.shopContainer {
+    background-color: #ffffff;
+    padding: 3rem 6rem;
+}
+
+.shopContainer h2 {
+    font-family: 'Vollkorn', serif;
+    color: #025048;
+    font-size: 2rem;
+    margin-block-end: 1rem;
+}
+
+hr {
+    border: none;
+    border-bottom: 1px solid #cedad8;
+    margin-block-end: 3rem;
+}
+
+.subHeading {
+    display: flex;
+    justify-content: space-between;
+    margin-block-end: 2rem;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9rem;
+    color: #4b4b4b;
+}
+
+.subHeading select,
+option {
+    color: #4b4b4b;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.loadingText {
+    color: #025048;
+    font-family: 'Open sans', sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.error {
+    width: 80vw;
+    padding-inline-start: 2rem;
+    text-align: center;
+    padding-block: 12rem;
+}

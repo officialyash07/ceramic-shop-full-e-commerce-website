@@ -1,0 +1,129 @@
+.cartContainer {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9999999999999;
+    display: flex;
+    justify-content: flex-end;
+    overflow: scroll;
+}
+
+.cart {
+    background-color: #ffffff;
+    width: 33rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    animation: cartSlideOpen 0.9s ease;
+    height: 100%;
+    overflow: scroll;
+}
+
+.cart hr {
+    margin: 0;
+}
+
+.cartItemsContainer {
+    padding: 2rem;
+    flex: 1;
+}
+
+.cartContainer::backdrop {
+    background-color: #000000;
+}
+
+.noItems {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+    color: #4b4b4b;
+}
+
+.cartHeader {
+    padding: 2rem;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cartHeader h2 {
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: #025048;
+}
+
+.closeBtn {
+    width: 20px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.closeBtn svg {
+    fill: #025048;
+}
+
+.cartFooter {
+    padding: 2rem;
+}
+
+.cartFooter button {
+    width: 100%;
+    color: #025048;
+    border-color: #025048;
+    padding-block: 1rem;
+    transition: 0.4s ease-in-out;
+    margin-block-start: 1rem;
+}
+
+.cartFooter button:hover {
+    color: #ffffff;
+    background-color: #025048;
+}
+
+.cartFooter .total {
+    padding-block: 0.5rem;
+    padding-inline: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.total p {
+    color: #025048;
+    font-weight: 600;
+}
+
+.total .amount {
+    color: #4b4b4b;
+}
+
+.actions {
+    margin-block-start: 1rem;
+}
+
+@keyframes cartSlideOpen {
+    from {
+        transform: translateX(34rem);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes cartSlideClose {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(34rem);
+    }
+}

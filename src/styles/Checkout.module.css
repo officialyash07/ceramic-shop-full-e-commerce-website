@@ -1,0 +1,85 @@
+.checkout {
+    background-color: #ffffff;
+    min-height: 67vh;
+    padding: 3rem 6rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.checkout h2 {
+    color: #025048;
+    font-family: 'Vollkorn', serif;
+    font-size: 2rem;
+    margin-block-end: 2rem;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 0.7fr;
+    gap: 2rem;
+}
+
+.orders > div {
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    color: #4b4b4b;
+}
+
+.orders p {
+    padding: 0.5rem 1rem;
+}
+
+.orders h3 {
+    color: #025048;
+    font-family: 'Vollkorn', serif;
+    font-weight: 600;
+    padding-block: 0.3rem;
+    margin-block-end: 1.5rem;
+    width: fit-content;
+}
+
+.orders .title {
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #c4c4c4;
+    padding-block: 1rem;
+}
+
+.subtotal {
+    font-weight: 400;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #c4c4c4;
+    padding-block: 1rem;
+}
+
+.total {
+    font-weight: 900;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    padding-block: 1rem;
+}
+
+.products img {
+    width: 60px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-inline-start: 1rem;
+    margin-block: 0.8rem;
+}
+
+.product {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #c4c4c4;
+}
+
+.product .productName {
+    flex: 1;
+}
+
+.product .price {
+    text-align: right;
+}
