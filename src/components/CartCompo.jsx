@@ -1,16 +1,16 @@
-import classes from '../styles/CartCompo.module.css';
+import classes from "../styles/CartCompo.module.css";
 
-import Button from '../UI/Button';
+import Button from "../UI/Button";
 
-import { DeleteIcon, Empty } from '../icons';
+import { DeleteIcon, Empty } from "../icons";
 
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from "react-redux";
 
-import { cartActions } from '../store/cartSlice';
+import { cartActions } from "../store/cartSlice";
 
-import { currencyFormatter } from '../util/formatting';
+import { currencyFormatter } from "../util/formatting";
 
 const CartCompo = () => {
     const dispatch = useDispatch();
@@ -65,19 +65,46 @@ const CartCompo = () => {
                                 {items.map((item) => (
                                     <tr key={item.id}>
                                         <td className={classes.name}>
-                                            <button onClick={() => deleteItemFromCart(item.id)}>
+                                            <button
+                                                onClick={() =>
+                                                    deleteItemFromCart(item.id)
+                                                }
+                                            >
                                                 <DeleteIcon />
                                             </button>
-                                            <img src={`http://localhost:3000/${item.image}`} alt="" />
+                                            <img
+                                                src={`/${item.image}`}
+                                                alt={item.name}
+                                            />
                                             {item.name}
                                         </td>
-                                        <td>{currencyFormatter.format(item.price)}</td>
-                                        <td className={classes.productAction}>
-                                            <button onClick={() => removeItemFromCart(item.id)}>-</button>
-                                            <p>{item.quantity}</p>
-                                            <button onClick={() => addItemToCart(item.id)}>+</button>
+                                        <td>
+                                            {currencyFormatter.format(
+                                                item.price
+                                            )}
                                         </td>
-                                        <td>{currencyFormatter.format(item.quantity * item.price)}</td>
+                                        <td className={classes.productAction}>
+                                            <button
+                                                onClick={() =>
+                                                    removeItemFromCart(item.id)
+                                                }
+                                            >
+                                                -
+                                            </button>
+                                            <p>{item.quantity}</p>
+                                            <button
+                                                onClick={() =>
+                                                    addItemToCart(item.id)
+                                                }
+                                            >
+                                                +
+                                            </button>
+                                        </td>
+                                        <td>
+                                            {currencyFormatter.format(
+                                                item.quantity * item.price
+                                            )}
+                                        </td>
                                     </tr>
                                 ))}
                             </tbody>
@@ -96,7 +123,9 @@ const CartCompo = () => {
                         </div>
                         <hr />
                         <div className={classes.actions}>
-                            <Button className={classes.couponBtn}>Have a coupon?</Button>
+                            <Button className={classes.couponBtn}>
+                                Have a coupon?
+                            </Button>
                             <Button className={classes.checkoutBtn}>
                                 <Link to="/checkout">proceed to checkout</Link>
                             </Button>

@@ -1,32 +1,21 @@
-import classes from '../styles/CheckoutForm.module.css';
+import classes from "../styles/CheckoutForm.module.css";
 
-import { useState, useEffect } from 'react';
+import { useState } from "react";
 
-import { Lock, Check } from '../icons';
+import { Lock, Check } from "../icons";
 
-import Button from '../UI/Button';
+import Button from "../UI/Button";
 
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-import { useDispatch } from 'react-redux';
+import { useDispatch } from "react-redux";
 
-import { cartActions } from '../store/cartSlice';
+import { cartActions } from "../store/cartSlice";
 
 const CheckoutForm = () => {
-    const [countries, setCountries] = useState([]);
-
     const [isPlaced, setIsPlaced] = useState(false);
 
     const dispatch = useDispatch();
-
-    useEffect(() => {
-        async function fetchCountries() {
-            const response = await fetch('https://restcountries.com/v3.1/all');
-            const data = await response.json();
-            setCountries(data);
-        }
-        fetchCountries();
-    }, []);
 
     const handlePlaceOrder = (event) => {
         event.preventDefault();
@@ -48,8 +37,8 @@ const CheckoutForm = () => {
                     <Check />
                     <h1>Your order has been placed successfully.</h1>
                     <h3>
-                        You will get the tracking details on your registered phone number as soon as the order is
-                        shipped.{' '}
+                        You will get the tracking details on your registered
+                        phone number as soon as the order is shipped.{" "}
                     </h3>
                     <div className={classes.placedActions}>
                         <Button onClick={handleClickOkay}>okay</Button>
@@ -60,23 +49,41 @@ const CheckoutForm = () => {
                 </div>
             )}
             {!isPlaced && (
-                <form className={classes.checkoutForm} onSubmit={handlePlaceOrder}>
+                <form
+                    className={classes.checkoutForm}
+                    onSubmit={handlePlaceOrder}
+                >
                     <h3>Customer Information</h3>
-                    <input type="email" name="email" id="email" placeholder="Email Address *" required />
+                    <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="Email Address *"
+                        required
+                    />
                     <h3>Billing Details</h3>
                     <div className={classes.flex}>
-                        <input type="text" name="fName" id="fName" placeholder="First name *" required />
-                        <input type="text" name="sName" id="sName" placeholder="Last name *" required />
+                        <input
+                            type="text"
+                            name="fName"
+                            id="fName"
+                            placeholder="First name *"
+                            required
+                        />
+                        <input
+                            type="text"
+                            name="sName"
+                            id="sName"
+                            placeholder="Last name *"
+                            required
+                        />
                     </div>
-                    <input type="text" name="company" id="company" placeholder="Company name" />
-                    <select name="country" id="country" required>
-                        <option value="">Select Country *</option>
-                        {countries.map((country) => (
-                            <option value={country.name.common} key={country.cca3}>
-                                {country.name.common}
-                            </option>
-                        ))}
-                    </select>
+                    <input
+                        type="text"
+                        name="company"
+                        id="company"
+                        placeholder="Company name"
+                    />
                     <div className={classes.flex}>
                         <input
                             type="text"
@@ -93,11 +100,35 @@ const CheckoutForm = () => {
                         />
                     </div>
                     <div className={classes.flex}>
-                        <input type="text" name="city" id="city" placeholder="Town / City *" required />
-                        <input type="text" name="state" id="state" placeholder="State *" required />
-                        <input type="text" name="postalCode" id="postalCode" placeholder="ZIP Code *" required />
+                        <input
+                            type="text"
+                            name="city"
+                            id="city"
+                            placeholder="Town / City *"
+                            required
+                        />
+                        <input
+                            type="text"
+                            name="state"
+                            id="state"
+                            placeholder="State *"
+                            required
+                        />
+                        <input
+                            type="text"
+                            name="postalCode"
+                            id="postalCode"
+                            placeholder="ZIP Code *"
+                            required
+                        />
                     </div>
-                    <input type="number" name="number" id="number" placeholder="Phone *" required />
+                    <input
+                        type="number"
+                        name="number"
+                        id="number"
+                        placeholder="Phone *"
+                        required
+                    />
                     <h3>Additional Information</h3>
                     <textarea
                         name="extra"
@@ -106,7 +137,7 @@ const CheckoutForm = () => {
                     ></textarea>
                     <Button className={classes.orderBtn}>
                         <Lock />
-                        place order {`total`}
+                        place order
                     </Button>
                 </form>
             )}

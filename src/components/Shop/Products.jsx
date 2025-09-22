@@ -1,8 +1,8 @@
-import classes from '../../styles/Shop.module.css';
+import classes from "../../styles/Shop.module.css";
 
-import ProductItem from '../ProductItem';
+import ProductItem from "../ProductItem";
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 const Products = () => {
     const [loadedProducts, setLoadedProducts] = useState([]);
@@ -12,10 +12,14 @@ const Products = () => {
     useEffect(() => {
         async function fetchProducts() {
             try {
-                const response = await fetch('http://localhost:3000/products');
+                const response = await fetch("/products.json");
+                if (!response.ok) {
+                    throw new Error("Failed to fetch products");
+                }
                 const products = await response.json();
                 setLoadedProducts(products);
-            } catch (error) {
+            } catch (err) {
+                console.error(err);
                 setError(true);
             }
         }
@@ -33,11 +37,15 @@ const Products = () => {
                     <option value="popularity">Sort by Popularity</option>
                     <option value="latest">Sort by Latest</option>
                     <option value="lowPrice">Sort by Price: Low to High</option>
-                    <option value="highPrice">Sort by Price: High to Low</option>
+                    <option value="highPrice">
+                        Sort by Price: High to Low
+                    </option>
                 </select>
             </div>
             <div className={classes.products}>
-                {error && <h1 className={classes.error}>Failed to fetch data...</h1>}
+                {error && (
+                    <h1 className={classes.error}>Failed to fetch data...</h1>
+                )}
                 {loadedProducts.map((product) => (
                     <ProductItem key={product.id} product={product} />
                 ))}

@@ -1,13 +1,13 @@
 /* eslint-disable react/prop-types */
-import classes from '../styles/CartItem.module.css';
+import classes from "../styles/CartItem.module.css";
 
-import { DeleteIcon } from '../icons';
+import { DeleteIcon } from "../icons";
 
-import { currencyFormatter } from '../util/formatting';
+import { currencyFormatter } from "../util/formatting";
 
-import { cartActions } from '../store/cartSlice';
+import { cartActions } from "../store/cartSlice";
 
-import { useDispatch } from 'react-redux';
+import { useDispatch } from "react-redux";
 
 const CartItem = ({ item }) => {
     const dispatch = useDispatch();
@@ -29,7 +29,7 @@ const CartItem = ({ item }) => {
     return (
         <div className={classes.cartItem}>
             <div className={classes.images}>
-                <img src={`http://localhost:3000/${item.image}`} alt="" />
+                <img src={`/${item.image}`} alt="" />
             </div>
             <div className={classes.title}>
                 <h2>{item.name}</h2>
