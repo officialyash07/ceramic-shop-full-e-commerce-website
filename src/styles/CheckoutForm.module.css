@@ -1,6 +1,6 @@
 .checkoutForm h3 {
     color: #025048;
-    font-family: 'Vollkorn', serif;
+    font-family: "Vollkorn", serif;
     font-weight: 600;
     padding-block: 0.3rem;
     margin-block-end: 1.5rem;
@@ -103,4 +103,70 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.paymentBtns {
+    display: flex;
+    gap: 1rem;
+    margin-block-end: 2rem;
+}
+
+.paymentOptions button {
+    color: #025048;
+    border: 1px solid #025048;
+    transition: 0.3s ease;
+    margin-block-start: 1rem;
+    width: fit-content;
+    padding-block: 0.7rem;
+    display: block;
+}
+
+.paymentOptions button:hover {
+    color: #ffffff;
+    background-color: #025048;
+}
+
+.scan {
+    margin-block-end: 1rem;
+    display: block;
+}
+
+.scan p {
+    color: #025048;
+    font-weight: 500;
+    margin-block-end: 1rem;
+}
+
+.upi input {
+    outline: none;
+    border: 1px solid #c4c4c4;
+    background-color: transparent;
+    color: #4b4b4b;
+    margin-block-end: 1.5rem;
+    width: 70%;
+    padding-block: 0.7rem;
+    padding-inline: 1rem;
+}
+
+.upi input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.card input {
+    outline: none;
+    border: 1px solid #c4c4c4;
+    background-color: transparent;
+    color: #4b4b4b;
+    margin-block-end: 1.5rem;
+    width: 70%;
+    padding-block: 0.7rem;
+    padding-inline: 1rem;
+}
+
+.card input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }

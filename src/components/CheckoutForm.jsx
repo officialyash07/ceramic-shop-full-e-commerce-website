@@ -4,30 +4,54 @@ import { useState } from "react";
 
 import { Lock, Check } from "../icons";
 
+import { QRCodeCanvas } from "qrcode.react";
+
 import Button from "../UI/Button";
 
 import { Link } from "react-router-dom";
 
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import { cartActions } from "../store/cartSlice";
 
 const CheckoutForm = () => {
     const [isPlaced, setIsPlaced] = useState(false);
+    const [showPayment, setShowPayment] = useState(false);
+    const [paymentMethod, setPaymentMethod] = useState("");
+    const [upiId, setUpiId] = useState("");
+    const [cardDetails, setCardDetails] = useState({
+        number: "",
+        expiry: "",
+        cvv: "",
+    });
+    const items = useSelector((state) => state.cart.items);
+    const cartTotal = items.reduce((totalPrice, item) => {
+        return totalPrice + item.quantity * item.price;
+    }, 0);
+
+    const upiIdToPay = "yashpathik@ybl";
+    const upiPayeeName = "Ceramic Shop";
+    const txnId = `TXN${Date.now()}`;
+    const upiString = `upi://pay?pa=${upiIdToPay}&pn=${encodeURIComponent(
+        upiPayeeName
+    )}&am=${cartTotal}&cu=INR&tid=${txnId}`;
 
     const dispatch = useDispatch();
 
     const handlePlaceOrder = (event) => {
         event.preventDefault();
-        const fd = new FormData(event.target);
-        const data = Object.fromEntries(fd.entries());
-        console.log(data);
-        setIsPlaced(true);
-        dispatch(cartActions.clearCart());
+        setShowPayment(true);
     };
 
     const handleClickOkay = () => {
         setIsPlaced(false);
+    };
+
+    const handleConfirmPayment = (e) => {
+        e.preventDefault();
+        setIsPlaced(true);
+        setShowPayment(false);
+        dispatch(cartActions.clearCart());
     };
 
     return (
@@ -48,7 +72,7 @@ const CheckoutForm = () => {
                     </div>
                 </div>
             )}
-            {!isPlaced && (
+            {!showPayment && !isPlaced ? (
                 <form
                     className={classes.checkoutForm}
                     onSubmit={handlePlaceOrder}
@@ -140,6 +164,101 @@ const CheckoutForm = () => {
                         place order
                     </Button>
                 </form>
+            ) : null}
+            {showPayment && (
+                <div className={classes.paymentOptions}>
+                    <h3>Select Payment Method</h3>
+                    <div className={classes.paymentBtns}>
+                        <Button
+                            onClick={() => {
+                                setPaymentMethod("scan");
+                            }}
+                        >
+                            Scan to Pay
+                        </Button>
+                        <Button onClick={() => setPaymentMethod("upi")}>
+                            UPI ID
+                        </Button>
+                        <Button onClick={() => setPaymentMethod("card")}>
+                            Card
+                        </Button>
+                    </div>
+
+                    {paymentMethod === "scan" && (
+                        <div className={classes.scan}>
+                            <p>Scan this QR code to pay ${cartTotal}:</p>
+                            <QRCodeCanvas value={upiString} size={200} />
+                            <Button onClick={handleConfirmPayment}>
+                                Confirm Payment
+                            </Button>
+                        </div>
+                    )}
+
+                    {paymentMethod === "upi" && (
+                        <form
+                            className={classes.upi}
+                            onSubmit={handleConfirmPayment}
+                        >
+                            <input
+                                type="text"
+                                value={upiId}
+                                onChange={(e) => setUpiId(e.target.value)}
+                                placeholder="your-upi@bank"
+                                required
+                            />
+                            <Button type="submit">
+                                Continue to pay ${cartTotal}
+                            </Button>
+                        </form>
+                    )}
+
+                    {paymentMethod === "card" && (
+                        <form
+                            className={classes.card}
+                            onSubmit={handleConfirmPayment}
+                        >
+                            <input
+                                type="number"
+                                value={cardDetails.number}
+                                onChange={(e) =>
+                                    setCardDetails({
+                                        ...cardDetails,
+                                        number: e.target.value,
+                                    })
+                                }
+                                placeholder="Card Number"
+                                required
+                            />
+                            <input
+                                type="number"
+                                value={cardDetails.expiry}
+                                onChange={(e) =>
+                                    setCardDetails({
+                                        ...cardDetails,
+                                        expiry: e.target.value,
+                                    })
+                                }
+                                placeholder="MM/YY"
+                                required
+                            />
+                            <input
+                                type="password"
+                                value={cardDetails.cvv}
+                                onChange={(e) =>
+                                    setCardDetails({
+                                        ...cardDetails,
+                                        cvv: e.target.value,
+                                    })
+                                }
+                                placeholder="CVV"
+                                required
+                            />
+                            <Button type="submit">
+                                Continue to pay ${cartTotal}
+                            </Button>
+                        </form>
+                    )}
+                </div>
             )}
         </>
     );
